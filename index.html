@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />.
+</head>
+<body>
+    
+    <div class="box">
+        <div class="main-1">
+            <h1 style="color: white; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 55px;">Hang Man</h1>
+            <button class="btn startBtn">Start</button>
+        </div>
+        <div class="main-2">
+            <div class="won">
+                <h1>You won!</h1>
+                <h4 class="resultT">Time: </h4>
+                <h4 class="resultS">Score:</h4>
+                <b style="border: 1px solid gold; border-radius: 10px; padding: 10px; cursor: pointer; z-index: 1;" onclick="restart()">Play Again</b>
+            </div>
+            <div class="lose">
+                <h1>You lose!</h1>
+                <b style="border: 1px solid red; border-radius: 10px; padding: 10px; cursor: pointer; z-index: 1;" onclick="restart()">Play Again</b>
+            </div>
+            <div class="game-top">
+                <div class="top-left">
+                    <button style="border: 1px solid white; color: white; font-family: Verdana, Geneva, Tahoma, sans-serif; padding: 10px;" onclick="restart()" class="btn">Back</button>
+                    <div class="time mt-1">
+                        <h4 class="timer">0</h4>
+                        <h4 class="score">0</h4>
+                    </div>
+                    <div id="vowels" class="letters mt-1">
+                        <button>A</button>
+                        <button>E</button>
+                        <button>I</button>
+                        <button>O</button>
+                        <button>U</button>
+                    </div>
+                </div>
+                <div class="col-md-7  hang_center">
+                    <canvas class="canvas"></canvas>
+                </div>
+                <div class="top-right">
+                    <div id="consonants" class="letters mt-5">
+                        <button>B</button>
+                        <button>F</button>
+                        <button>J</button>
+                        <button>M</button>
+                        <button>Q</button>
+                        <button>T</button>
+                        <button>X</button>
+                    </div>
+                    <div id="consonants" class="letters mt-5">
+                        <button>C</button>
+                        <button>G</button>
+                        <button>K</button>
+                        <button>N</button>
+                        <button>R</button>
+                        <button>V</button>
+                        <button>Y</button>
+                    </div>
+                    <div id="consonants" class="letters mt-5">
+                        <button>D</button>
+                        <button>H</button>
+                        <button>L</button>
+                        <button>P</button>
+                        <button>S</button>
+                        <button>W</button>
+                        <button>Z</button>
+                    </div>
+                </div>
+            </div>
+            <div class="game-bottom">
+                <div id="wordContainer">
+                    <div id="word" style="color: white;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
